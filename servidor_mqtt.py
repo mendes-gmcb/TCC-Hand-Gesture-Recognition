@@ -21,7 +21,7 @@ def on_message(client, userdata, message):
   df.loc[len(df)] = [sensor_data["2"], sensor_data["3"], sensor_data["4"], sensor_data["5"], sensor_data["6"]]
 
 # Configurações do broker MQTT
-mqtt_broker = "192.168.75.69" # IP do notebook
+mqtt_broker = "192.168.226.69" # IP do notebook
 mqtt_port = 1883
 mqtt_topic = "sensor/mpu6050"
 
@@ -48,4 +48,4 @@ client.loop_stop()
 client.disconnect()
 
 # Salva os dados em um arquivo JSON
-df.to_json('gestos/passarslide.json', orient='records')
+df.to_json('gestos/fechar_mao5.json', orient='records')
